@@ -1,0 +1,103 @@
+/*--
+    - Button Style
+------------------------------------------*/
+.default-btn {
+    letter-spacing: 1px;
+    padding: 20px 45px;
+    display: inline-block;
+    border-radius: 5px;
+    color: $white;
+    font-weight: 600;
+    display: inline-block;
+    @include transition(0.3s); 
+    
+    @media #{$large-mobile}{
+        padding: 10px 22px;
+    }
+    @media #{$tablet-device}{
+        padding: 10px 22px;
+    }
+}
+.gradient-btn {
+    background-image: linear-gradient(to top, #12b4f2 0%, #0259ae 51%, #12b4f2 100%);
+    background-size: auto  200%;
+    &:hover {
+        background-position: center bottom;
+        color: $white;
+    }
+}
+
+.hover-gradient-btn {
+    &:hover {
+        background-image: linear-gradient(to top, #12b4f2 0%, #0259ae 51%, #12b4f2 100%);
+        background-size: auto  200%;
+        background-position: center bottom;
+        color: $white;
+    }
+}
+.primary-btn {
+    padding: 20px 30px;
+    background: $white;
+    color: #333;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    @include transition(0.3s);
+    @media #{$large-mobile}{
+        padding: 10px 22px;
+    }
+    @media #{$tablet-device}{
+        padding: 10px 22px;
+    }
+}
+
+.border-r-30 {
+    border-radius: 30px;
+}
+.border-r-5 {
+    border-radius: 5px;
+}
+
+.btn {
+    background: $theme-color;
+    color: $white;
+    border-radius: 0;
+    font-weight: 600;
+    font-size: 14px;
+    @include transition(.3s);
+    position: relative;
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+    @media #{$small-mobile}{
+        padding: 1px 20px;
+        font-size: 12px;
+    }
+    & span {
+        display: inline-block;
+        line-height: inherit;
+        transition: none;
+    }
+    & i {
+        display: inline-block;
+        line-height: inherit;
+        transition: none;
+    }
+    &.left {
+        & i {
+            margin-right: 10px;
+        }
+    }
+    &.right {
+        & i {
+            margin-left: 10px;
+        }
+    }
+    &:hover , &:active {
+        background: $black;
+        color: $white;
+    }
+    
+}
